@@ -56,12 +56,12 @@
 
     <main>
         <!-- Bloco 2 — Seção principal -->
-        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-base-paper">
+        <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-base-paper">
             <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-gold/5 blur-3xl animate-pulse" style="animation-duration: 8s;"></div>
             <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-primary-navy/5 blur-3xl animate-pulse" style="animation-duration: 10s;"></div>
             
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
-                <img x-show="show" x-transition.duration.1000ms.opacity.scale.90 src="/images/logo.png" alt="Odisseia Filosófica Logo" class="mx-auto h-8 md:h-10 w-auto mb-8 object-contain drop-shadow-sm">
+                <img x-show="show" x-transition.duration.1000ms.opacity.scale.90 src="/images/logo.png" alt="Odisseia Filosófica Logo" class="mx-auto h-20 md:h-24 w-auto mb-10 object-contain drop-shadow-sm">
                 
                 <div x-show="show" x-transition.duration.1000ms.opacity.translate.y.20px class="inline-block mb-6 px-4 py-1.5 border-b border-primary-gold text-primary-gold text-sm font-semibold tracking-widest uppercase">
                     Filosofia para compreender, interpretar e transformar a experiência
