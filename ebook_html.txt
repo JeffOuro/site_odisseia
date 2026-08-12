@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Primeiros Passos no Estudo da Filosofia — Guia Prático</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="style" href="https://ebook.odisseiafilosofica.com.br/build/assets/app-DtS0SKIr.css" /><link rel="modulepreload" as="script" href="https://ebook.odisseiafilosofica.com.br/build/assets/app-CX9392oA.js" /><link rel="stylesheet" href="https://ebook.odisseiafilosofica.com.br/build/assets/app-DtS0SKIr.css" /><script type="module" src="https://ebook.odisseiafilosofica.com.br/build/assets/app-CX9392oA.js"></script>    </head>
+<body class="bg-[#F8F7F4] text-[#18232C] font-sans antialiased selection:bg-[#B18A47] selection:text-white overflow-x-hidden">
+    <script data-page="app" type="application/json">{"component":"LandingPage","props":{"errors":{}},"url":"\/","version":"9b9f9ab4be46e0d78fdf0cea4b6544ad","sharedProps":["errors"]}</script><div id="app"></div></body>
+</html>
+
