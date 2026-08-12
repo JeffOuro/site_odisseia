@@ -56,32 +56,32 @@
 
     <main>
         <!-- Bloco 2 — Seção principal -->
-        <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-base-paper">
+        <section class="relative pt-24 pb-12 lg:pt-28 lg:pb-20 overflow-hidden bg-base-paper">
             <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-gold/5 blur-3xl animate-pulse" style="animation-duration: 8s;"></div>
             <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-primary-navy/5 blur-3xl animate-pulse" style="animation-duration: 10s;"></div>
             
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
-                <img x-show="show" x-transition.duration.1000ms.opacity.scale.90 src="/images/logo.png" alt="Odisseia Filosófica Logo" class="mx-auto h-28 md:h-32 w-auto mb-10 object-contain drop-shadow-sm">
+                <img x-show="show" x-transition.duration.1000ms.opacity.scale.90 src="/images/logo.png" alt="Odisseia Filosófica Logo" class="mx-auto h-28 md:h-32 w-auto mb-6 object-contain drop-shadow-sm">
                 
-                <div x-show="show" x-transition.duration.1000ms.opacity.translate.y.20px class="inline-block mb-6 px-4 py-1.5 border-b border-primary-gold text-primary-gold text-sm font-semibold tracking-widest uppercase">
+                <div x-show="show" x-transition.duration.1000ms.opacity.translate.y.20px class="inline-block mb-4 px-4 py-1.5 border-b border-primary-gold text-primary-gold text-xs sm:text-sm font-semibold tracking-widest uppercase">
                     Filosofia para compreender, interpretar e transformar a experiência
                 </div>
                 
-                <h1 x-show="show" x-transition.duration.1000ms.delay.200ms.opacity.translate.y.20px class="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold text-primary-navy leading-tight mb-6">
+                <h1 x-show="show" x-transition.duration.1000ms.delay.200ms.opacity.translate.y.20px class="text-3xl md:text-4xl lg:text-5xl font-cinzel font-bold text-primary-navy leading-tight mb-4">
                     Pensar com profundidade para viver com mais clareza
                 </h1>
                 
-                <p x-show="show" x-transition.duration.1000ms.delay.400ms.opacity.translate.y.20px class="text-lg md:text-xl text-comp-graphite mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+                <p x-show="show" x-transition.duration.1000ms.delay.400ms.opacity.translate.y.20px class="text-base md:text-lg text-comp-graphite mb-8 max-w-3xl mx-auto leading-relaxed font-light">
                     A Odisseia Filosófica é um espaço para estudar Filosofia com profundidade e clareza. Em diálogo cuidadoso com a Psicologia, a Literatura, os Mitos e os Símbolos, ajuda quem deseja conhecer melhor a si mesmo, cultivar o autoconhecimento e buscar um autoaperfeiçoamento responsável.
                 </p>
                 
-                <div x-show="show" x-transition.duration.1000ms.delay.600ms.opacity.translate.y.20px class="flex justify-center items-center mb-8">
-                    <a href="#cursos" class="w-full sm:w-auto bg-primary-navy text-white font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-comp-darknavy transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                <div x-show="show" x-transition.duration.1000ms.delay.600ms.opacity.translate.y.20px class="flex justify-center items-center mb-6">
+                    <a href="#cursos" class="w-full sm:w-auto bg-primary-navy text-white font-bold uppercase tracking-wider px-8 py-3.5 sm:px-10 sm:py-4 rounded hover:bg-comp-darknavy transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
                         Tenho interesse nos cursos
                     </a>
                 </div>
                 
-                <p x-show="show" x-transition.duration.1000ms.delay.800ms.opacity.translate.y.20px class="text-sm text-comp-gray-500 font-serif italic text-gray-500">
+                <p x-show="show" x-transition.duration.1000ms.delay.800ms.opacity.translate.y.20px class="text-xs sm:text-sm text-comp-gray-500 font-serif italic text-gray-500">
                     Conteúdo semanal, avisos de novos cursos e materiais formativos. Sem promessas fáceis e sem excesso de mensagens.
                 </p>
             </div>
