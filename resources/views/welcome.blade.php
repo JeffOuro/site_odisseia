@@ -75,11 +75,8 @@
                     A Odisseia Filosófica é um espaço para estudar Filosofia com profundidade e clareza. Em diálogo cuidadoso com a Psicologia, a Literatura, os Mitos e os Símbolos, ajuda quem deseja conhecer melhor a si mesmo, cultivar o autoconhecimento e buscar um autoaperfeiçoamento responsável.
                 </p>
                 
-                <div x-show="show" x-transition.duration.1000ms.delay.600ms.opacity.translate.y.20px class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-                    <a href="#newsletter" class="w-full sm:w-auto bg-primary-navy text-white font-bold uppercase tracking-wider px-8 py-3.5 rounded hover:bg-comp-darknavy transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                        Quero receber a newsletter
-                    </a>
-                    <a href="#cursos" class="w-full sm:w-auto bg-transparent text-primary-navy border border-primary-navy/30 font-semibold uppercase tracking-wider px-8 py-3.5 rounded hover:bg-primary-navy/5 transition-all">
+                <div x-show="show" x-transition.duration.1000ms.delay.600ms.opacity.translate.y.20px class="flex justify-center items-center mb-8">
+                    <a href="#cursos" class="w-full sm:w-auto bg-primary-navy text-white font-bold uppercase tracking-wider px-10 py-4 rounded hover:bg-comp-darknavy transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
                         Tenho interesse nos cursos
                     </a>
                 </div>
