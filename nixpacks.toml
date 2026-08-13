@@ -1,9 +1,0 @@
-[phases.build]
-    cmds = [
-        "npm run build",
-        "touch database/database.sqlite",
-        "php artisan migrate --force"
-    ]
-
-[start]
-    cmd = "bash docker/entrypoint.sh"

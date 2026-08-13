@@ -1,16 +1,30 @@
-#!/bin/bash
+#!/bin/sh
+set -e
 
-echo "Starting deployment script..."
+# Cria o banco de dados se não existir
+mkdir -p /var/www/html/database
+if [ ! -f /var/www/html/database/database.sqlite ]; then
+    touch /var/www/html/database/database.sqlite
+fi
 
-# Run migrations (don't exit on failure)
-php artisan migrate --force || echo "Migration failed"
+# Configura o ambiente
+export DB_CONNECTION=sqlite
+export DB_DATABASE=/var/www/html/database/database.sqlite
+export SESSION_DRIVER=file
+export CACHE_STORE=file
+export QUEUE_CONNECTION=database
 
-# Start queue worker in background
-php artisan queue:work &
+# Ajusta permissões
+chown -R www-data:www-data /var/www/html/database /var/www/html/storage /var/www/html/bootstrap/cache
+chmod -R 775 /var/www/html/database /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Start PHP-FPM in background
-php-fpm -y /etc/php-fpm.conf &
+# Executa migrações
+php artisan migrate --force || true
 
-# Start Caddy in foreground (keeps container alive)
-echo "Starting Caddy..."
-exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+# Otimizações
+php artisan config:cache || true
+php artisan route:cache || true
+php artisan view:cache || true
+
+# Inicia o Supervisor (que vai iniciar o Nginx, PHP-FPM e o Queue Worker)
+exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
