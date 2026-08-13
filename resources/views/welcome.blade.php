@@ -76,7 +76,7 @@
                 </p>
                 
                 <div x-show="show" x-transition.duration.1000ms.delay.600ms.opacity.translate.y.20px class="flex justify-center items-center mb-5">
-                    <a href="#cursos" class="w-full sm:w-auto bg-primary-navy text-white font-bold uppercase tracking-wider px-8 py-3.5 sm:px-10 sm:py-3 rounded hover:bg-comp-darknavy transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 text-sm">
+                    <a href="#newsletter" class="w-full sm:w-auto bg-primary-navy text-white font-bold uppercase tracking-wider px-8 py-3.5 sm:px-10 sm:py-3 rounded hover:bg-comp-darknavy transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 text-sm">
                         Tenho interesse nos cursos
                     </a>
                 </div>
@@ -380,7 +380,7 @@
                     <ul class="space-y-3 text-sm font-light">
                         <li><a href="#sobre" class="hover:text-primary-gold transition-colors">Sobre</a></li>
                         <li><a href="#newsletter" class="hover:text-primary-gold transition-colors">Newsletter</a></li>
-                        <li><a href="#cursos" class="hover:text-primary-gold transition-colors">Cursos</a></li>
+                        <li><a href="#newsletter" class="hover:text-primary-gold transition-colors">Cursos</a></li>
                     </ul>
                 </div>
                 
