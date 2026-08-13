@@ -1,5 +1,3 @@
-[providers]
-    - "php"
 
 [phases.build]
     cmds = [
