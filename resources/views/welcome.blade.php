@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odisseia Filosófica — Pensar com profundidade para viver com mais clareza</title>
     <meta name="description" content="Filosofia para compreender, interpretar e transformar a experiência.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
