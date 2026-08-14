@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Lead;
 use App\Jobs\SendLeadToEvolutionAPI;
+use App\Jobs\SendLeadToBrevo;
 
 class LeadController extends Controller
 {
@@ -22,8 +23,11 @@ class LeadController extends Controller
 
         $lead = Lead::create($validated);
 
+        // Envia para o Brevo em background
+        SendLeadToBrevo::dispatch($lead);
+
         if ($lead->whatsapp) {
-            // Envia para a API em background (fila)
+            // Envia para a API de WhatsApp em background
             SendLeadToEvolutionAPI::dispatch($lead);
         }
 

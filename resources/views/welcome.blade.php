@@ -4,12 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odisseia Filosófica — Pensar com profundidade para viver com mais clareza</title>
-    <meta name="description" content="Filosofia para compreender, interpretar e transformar a experiência.">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="A Odisseia Filosófica é um espaço para estudar Filosofia com profundidade e clareza, em diálogo cuidadoso com a Psicologia, Literatura e Símbolos.">
+    <meta name="keywords" content="Filosofia, Autoconhecimento, Psicologia, Jefferson Alves da Silva, Cursos de Filosofia, Vida Intelectual">
+    <meta name="author" content="Jefferson Alves da Silva">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     
+    <link rel="canonical" href="{{ config('app.url', 'https://odisseiafilosofica.com.br') }}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preload" href="/images/logo.png" as="image">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ config('app.url', 'https://odisseiafilosofica.com.br') }}">
+    <meta property="og:title" content="Odisseia Filosófica — Pensar com profundidade para viver com mais clareza">
+    <meta property="og:description" content="Estudo de Filosofia com profundidade e clareza em diálogo com a Psicologia e a Literatura.">
+    <meta property="og:image" content="{{ config('app.url', 'https://odisseiafilosofica.com.br') }}/images/logo.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Odisseia Filosófica">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ config('app.url', 'https://odisseiafilosofica.com.br') }}">
+    <meta name="twitter:title" content="Odisseia Filosófica — Pensar com profundidade para viver com mais clareza">
+    <meta name="twitter:description" content="Estudo de Filosofia com profundidade e clareza em diálogo com a Psicologia e a Literatura.">
+    <meta name="twitter:image" content="{{ config('app.url', 'https://odisseiafilosofica.com.br') }}/images/logo.png">
+
+    <!-- Schema.org / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Odisseia Filosófica",
+      "url": "https://odisseiafilosofica.com.br",
+      "logo": "https://odisseiafilosofica.com.br/images/logo.png",
+      "description": "Espaço para estudar Filosofia com profundidade e clareza em diálogo com a Psicologia, Literatura e Símbolos.",
+      "founder": {
+        "@type": "Person",
+        "name": "Jefferson Alves da Silva",
+        "jobTitle": "Professor de Filosofia e Escritor",
+        "sameAs": [
+          "https://instagram.com/odisseiafilosofica"
+        ]
+      }
+    }
+    </script>
+
+    @if(env('GTM_ID'))
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ env('GTM_ID') }}');</script>
+    <!-- End Google Tag Manager -->
+    @endif
+
+    @if(env('GA_MEASUREMENT_ID'))
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA_MEASUREMENT_ID') }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ env('GA_MEASUREMENT_ID') }}');
+    </script>
+    @endif
+
+    @if(env('FACEBOOK_PIXEL_ID'))
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '{{ env('FACEBOOK_PIXEL_ID') }}');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id={{ env('FACEBOOK_PIXEL_ID') }}&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    @endif
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans text-comp-graphite bg-base-paper antialiased leading-relaxed selection:bg-primary-gold selection:text-white">
+    @if(env('GTM_ID'))
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ env('GTM_ID') }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    @endif
 
     <!-- Bloco 1 — Menu -->
     <header x-data="{ open: false, scrolled: false }" 
@@ -303,7 +392,7 @@
                     
                     <!-- Avatar "Mais aberto" -->
                     <div class="w-32 h-32 md:w-48 md:h-48 rounded-full border border-primary-gold/30 bg-white shrink-0 flex items-center justify-center shadow-inner relative group">
-                        <img src="/images/jefferson.jpg" alt="Jefferson Alves da Silva" class="absolute w-[88%] h-[88%] object-cover rounded-full group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Jefferson+Alves&background=0E2340&color=fff&size=512';">
+                        <img src="/images/jefferson.jpg" alt="Jefferson Alves da Silva" loading="lazy" decoding="async" class="absolute w-[88%] h-[88%] object-cover rounded-full group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Jefferson+Alves&background=0E2340&color=fff&size=512';">
                     </div>
                     
                     <div>
