@@ -440,6 +440,9 @@
                         <div class="absolute top-0 right-0 w-24 h-24 bg-primary-gold/5 rounded-bl-full"></div>
                         <form action="/lead" method="POST" class="space-y-5 relative z-10">
                             @csrf
+                            <div class="hidden" style="display:none !important;" aria-hidden="true">
+                                <input type="text" name="b_website" tabindex="-1" autocomplete="off">
+                            </div>
                             <input type="hidden" name="type" value="newsletter">
                             <div>
                                 <label for="nome_news" class="block text-xs font-bold text-primary-navy uppercase tracking-wider mb-1">Nome</label>

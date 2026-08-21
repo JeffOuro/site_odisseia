@@ -15,7 +15,7 @@ Route::get('/admin/leads', function (Illuminate\Http\Request $request) {
     return view('leads', compact('leads'));
 });
 
-Route::post('/lead', [LeadController::class, 'store']);
+Route::post('/lead', [LeadController::class, 'store'])->middleware('throttle:5,1');
 
 Route::get('/sitemap.xml', function () {
     $baseUrl = config('app.url', 'https://odisseiafilosofica.com.br');

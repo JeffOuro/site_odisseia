@@ -36,11 +36,14 @@ class SendLeadToBrevo implements ShouldQueue
 
         $payload = [
             'email' => $this->lead->email,
-            'attributes' => [
+            'attributes' => array_filter([
                 'FIRSTNAME' => $this->lead->nome,
                 'NOME' => $this->lead->nome,
                 'TYPE' => $this->lead->type ?? 'newsletter',
-            ],
+                'SMS' => $this->lead->whatsapp ? $this->lead->whatsapp : null,
+                'DATA_CADASTRO' => date('Y-m-d H:i:s'),
+                'OPT_IN' => true,
+            ]),
             'listIds' => $listIds,
             'updateEnabled' => true,
         ];
