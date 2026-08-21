@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+    'gtm' => [
+        'id' => env('GTM_ID'),
+    ],
+
+    'ga' => [
+        'id' => env('GA_MEASUREMENT_ID'),
+    ],
+
+    'facebook' => [
+        'pixel_id' => env('FACEBOOK_PIXEL_ID'),
+    ],
+
 ];
